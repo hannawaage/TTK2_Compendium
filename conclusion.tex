@@ -1,0 +1,6 @@
+\section{Conclusion}\label{sec:conclusion}
+When it comes to the linear classifier, we conclude that it works. The error rates were below 5\% in all tests. The result depends on training data. A classifier will create different decision rules from different training data. Also, a linear classifier works better with linearly separable classes. Removing features with overlap between classes did not affect the error rate much, but did decrease training time, which is good.
+
+When it comes to the template based classifier, the performance was also good. Error rates were found to bee between 3\% and 6\%. Using all the training data as templates gave the best error rates. However it took a long time to classify images. Using clustering resulted in higher error rates but dramatically faster classification once trained. Using KNN increased classification time in both cases, but the effect on the error rates varied - when using all the training data as templates, the error rate was improved slightly with KNN, while it was worsened when using clustering. The increased error rates could be caused by the classifier generalizing too much, meaning that outliers are mistaken for another class.
+
+All in all this project have given good insight into some of the basic principles of classification.

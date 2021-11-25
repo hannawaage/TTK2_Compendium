@@ -1,0 +1,74 @@
+
+\documentclass[11pt, a4paper, USenglish]{article} % change ``USenglish'' to ``norsk'' if applicable.
+%\documentclass[10pt,fleqn,oneside]{article}
+
+
+\usepackage{kyblab} % Contains all included packages. See kyblab.sty.
+\usepackage[a4paper, total={460pt, 690pt},hcentering, bindingoffset=0mm]{geometry}
+
+\addbibresource{riktig.bib} % Makes the bibliography file available to biblatex.
+
+%\setcounter{section}{-3}
+
+\usepackage{amsmath}
+\usepackage{graphicx}% http://ctan.org/pkg/graphicx
+\usepackage{yhmath}% http://ctan.org/pkg/yhmath
+\usepackage{mathdots}% http://ctan.org/pkg/mathdots
+\usepackage{MnSymbol}% http://ctan.org/pkg/mnsymbol
+\usepackage[toc,page]{appendix}
+\usepackage{dirtytalk}
+\bibliography{riktig}
+
+
+\begin{document}
+
+% Titlepage
+\title{TTK23 Design og analyse for funksjonell sikkerhet}
+\author{Kompendium\\
+Hanna Waage Hjelmeland}
+\date{March 26, 2021}
+\begin{titlepage}
+    \maketitle
+    \begin{figure}[h]
+    \centering
+        \includegraphics[width=\textwidth]{figures/FaultBasics/robot.png}\\   
+    \end{figure}
+
+   \thispagestyle{empty}
+\end{titlepage}
+
+% Abstract
+%\newpage
+%\input{abstract}
+%\thispagestyle{empty} % Avoid page numbering on the abstract page.
+\newpage
+% TOC
+\newpage
+\tableofcontents
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\thispagestyle{empty}
+% Avoid page numbering on the table of contents.
+
+% Main content
+\newpage
+\setcounter{page}{1}
+\input{sections/01}
+\input{sections/02FAST}
+\input{sections/03FMECA}
+
+\input{sections/OPPSUM}
+
+
+
+
+
+% \input simply inserts the contents of the file, while \include forces a \newpage.
+% See \input vs. \include: http://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include
+
+% References
+\newpage
+%\addcontentsline{toc}{section}{References}
+\printbibliography
+\label{sec:bibliography}
+
+\end{document}
