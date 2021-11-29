@@ -1,0 +1,34 @@
+\section{AI sikkerhet}
+\label{sec:ai}
+
+\subsection{Hvordan kan bruk av AI påvirke sikkerhetssystemer?}
+
+\begin{itemize}
+    \item Måten man innhenter treningsdata for maskinlæringsmodellen har mye å si for resultatet.
+    \item Selv om maskinlæringsmodellen er god og har vist bra resultater på andre områder, vil den ikke være bedre enn treningsdataen man henter inn.
+    \item Feil eller biased treningsdata kan gi helt feil bilde på situajsonen. Vi så f. eks. at GP-modellen rapporterer lav usikkerhet med OAT-sampling, selv om modellen var helt feil. Dermed kan det også være mye usikkerhet i modellens egen evne til å vurdere usikkerhet, og der kan det oppstå problemer.
+    \item Hvis vi i utgangspunktet har høy tillit til ML-modellen kan dette føre til at vi stoler blindt på resultatet, og glemmer å dobbeltsjekke.
+    \item Et feil bilde av situasjon/miljø/problem kan gi store konsekvenser og i verste fall føre til svikt/skade på systemet.
+\end{itemize}
+
+
+\subsection{Hvordan kan vi oppdage feil eller redusere konsekvenser??}
+
+\begin{itemize}
+    \item Måten man innhenter treningsdata for maskinlæringsmodellen har mye å si for resultatet.
+    \item Selv om maskinlæringsmodellen er god og har vist bra resultater på andre områder, vil den ikke være bedre enn treningsdataen man henter inn.
+    \item Feil eller biased treningsdata kan gi helt feil bilde på situajsonen. Vi så f. eks. at GP-modellen rapporterer lav usikkerhet med OAT-sampling, selv om modellen var helt feil. Dermed kan det også være mye usikkerhet i modellens egen evne til å vurdere usikkerhet, og der kan det oppstå problemer.
+    \item Hvis vi i utgangspunktet har høy tillit til ML-modellen kan dette føre til at vi stoler blindt på resultatet, og glemmer å dobbeltsjekke.
+    \item Et feil bilde av situasjon/miljø/problem kan gi store konsekvenser og i verste fall føre til svikt/skade på systemet.
+\end{itemize}
+
+\begin{itemize}
+    \item Sørge for å ha stort nok sett med treningsdata
+    \item Generere kunstige treningsdata for å utvide settet
+    \item Bruke adaptive metoder (slik som AL) for å sample oftere der usikkerheten er stor
+    \item Bruke ulike sampling- og/eller ML-metoder og vurdere enighet mellom resultatet av disse metodene
+    \item Fleksibel nok for komplekse modeller
+    \item Begrensninger som gir en modell forståelig for mennesket slik at mennesker kan debugge
+    \item Mulighet for menneskelig inngripen i potensielt farlige situasjoner
+    \item Få systemet til å reagere på hendelser definert uavhengig av ML-modell
+\end{itemize}

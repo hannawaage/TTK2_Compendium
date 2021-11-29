@@ -6,7 +6,7 @@
 \textbf{Funksjonell sikkerhet dreier seg om sikkerhet som ivaretas av elektriske, elektroniske og programmerbare (E/E/EP) systemer slik at vi kan beskytte mennesker, miljø og infrastruktur fra skade}. Det er et system som utfører en aktiv sikkerhetsfunksjon ved \textbf{behov}, for eksempel et system som henter en båt inn igjen dersom avviket rapportert fra DP-systemet blir for stort. Sikkerhet definerer vi som fravær av uakseptabel risiko.
 
 
-\subsection{Akronymer}
+\subsection{Akronymer og begreper}
 
 \begin{itemize}
     \item \textbf{SCS}: Safety Critical System
@@ -16,7 +16,52 @@
     \item \textbf{EUC}: Equipment Under Control
     \item \textbf{PFD}: Probability of Failure on Demand
     \item \textbf{PFH}: Probability of Failure per Hour
+    \item \textbf{ALARP}: As low as reasonably possible. Et prinsipp som betyr at risiko alltid må reduseres så mye som praktisk mulig. I en risikovurdering kan det være ett tiltak som er teoretisk mulig for å redusere risiko, men som dessverre vil medføre for store kostnader i forhold til hvor mye risikoen reduseres. Og det kan da være helt greit i følge ALARP-prinsippet å ikke utføre tiltaket. Samtidig er man forpliktet til å utføre tiltak som reduserer risiko også selv om risikoen i utgangspunktet ikke framstår som spesielt alarmerende. Man er forpliktet så lenge kostnadene forbundet med tiltakene er akseptable i forhold til vinningen.
+    \item \textbf{Hazard}: Potensiell farekilde forårsaket av at komponenten ikke utfører sin funksjon på en tilfredsstillende måte.
 \end{itemize}
+
+
+\subsection{Systemmodeller og metoder}
+
+Vi sier at et system kan beskrives av fire aspekter. Vi bruker et enkelt gressklippe-eksempel for å illustrere.
+
+\begin{itemize}
+    \item \textbf{Systemets komposisjon}: Samlingen av delene og objektene i systemet. F. eks. personen og gressklipperen.
+    \item \textbf{Miljøet}: Miljøet som systemet operer i. Det som er definert på utsiden av systemet men som både kan påvirke og bli påvirket av systemet. F. eks. plenen.
+    \item \textbf{Systemets struktur}: Relasjonene mellom systementiteter som innehar en rolle i systemet, dvs aktører som har en aktiv rolle og kan ta avgjørelser, ha ansvar for måloppnåelse osv. F. eks. kontrollere, aktuatorer, sensorsystemer. F. eks. Personen som klipper plenen. OBS: En aktør kan være både del av komposisjonen og strukturen.
+    \item \textbf{Systemets mekanismer}: Prosessene og funksjonene som gjør at systemet oppfører seg som det gjør. 
+\end{itemize}
+
+Disse kan illustreres i et \textit{systemtriangel}, hvor emergent oppførsel $\mu(s)$ oppstår i midten som resultat av samhandling mellom de tre hjørnene, og miljøet på utsiden.
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.7\textwidth]{figures/IEC/cesm.PNG}\\
+        \caption{Illustrasjon av de ulike aspektene av CESM-modellen.}
+\end{figure}
+
+Aspektene i CESM er både nødvendig og tilstrekkelig for å forstå egenskapene og oppførselen til ethvert system.
+For å finne en fullstendig modell av systemet, trenger vi systemmodeller som til sammen adresserer hele CESM metamodellen. Dette kan være vanskelig å få til.  Husk, George Box: Alle modeller er feil;
+noen er nyttige, som også betyr at \textbf{ikke alle er nyttige}.
+
+Flere systemmodeller kan representere hver av elementene i CESM. Dette står man fritt til å velge i forhold til
+målsetting og situasjon. En "komplett" systemmodell kan dannes med basis i følgende modelltyper som hver for
+seg adresserer forskjellige elementer i CESM:
+
+
+\begin{itemize}
+    \item Funksjonsmodell
+    \item Aktørmodell
+    \item Objektmodell
+    \item Målmodell
+    \item Modell(er) av oppførsel (emergens $\mu(s)$)
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{figures/IEC/systemmodell.PNG}\\
+        \caption{Illustrasjon av hvordan de ulike modellene henger sammen, for å beskrive alle elementene i CESM.}
+\end{figure}
 
 \subsection{IEC61508}
 
